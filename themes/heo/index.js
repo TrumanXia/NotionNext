@@ -92,7 +92,7 @@ const LayoutBase = props => {
   return (
     <div
       id="theme-heo"
-      className={`${siteConfig('FONT_STYLE')} bg-[#f7f9fe] dark:bg-[#18171d] h-full min-h-screen flex flex-col scroll-smooth`}
+      className={`${siteConfig('FONT_STYLE')} bg-[#eaf2ec] dark:bg-[#18171d] h-full min-h-screen flex flex-col scroll-smooth`}
     >
 
       <Style />
