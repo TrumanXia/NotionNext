@@ -33,7 +33,7 @@ export const MenuItemDrop = ({ link }) => {
             {link.subMenus.map((sLink, index) => {
               return <li key={index} className='cursor-pointer hover:bg-blue-600 hover:text-white text-gray-900  tracking-widest transition-all duration-200 dark:border-gray-700  py-1 pr-6 pl-3'>
                     <Link href={sLink.to} target={link?.to?.indexOf('http') === 0 ? '_blank' : '_self'}>
-                        <span className='text-sm text-nowrap font-extralight'>{link?.icon && <i className={sLink?.icon} > &nbsp; </i>}{sLink.title}</span>
+                        <span className='text-sm text-nowrap font-bold'>{link?.icon && <i className={sLink?.icon} > &nbsp; </i>}{sLink.title}</span>
                     </Link>
                 </li>
             })}

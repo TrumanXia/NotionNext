@@ -32,12 +32,12 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
                 <div className={'flex p-6 2xl:p-4 flex-col justify-between h-48 md:h-full 2xl:h-48 w-full md:w-7/12 2xl:w-full'}>
                     <header>
                         {/* 分类 */}
-                        {post?.category && <div className={`flex mb-1 items-center ${showPreview ? 'justify-center' : 'justify-start'} hidden md:block flex-wrap dark:text-gray-500 text-gray-600 `}>
+                        {/* {post?.category && <div className={`flex mb-1 items-center ${showPreview ? 'justify-center' : 'justify-start'} hidden md:block flex-wrap dark:text-gray-500 text-gray-600 `}>
                             <Link passHref href={`/category/${post.category}`}
                                 className="cursor-pointer text-xs font-normal menu-link hover:text-indigo-700 dark:hover:text-yellow-700  dark:text-gray-600 transform">
                                 {post.category}
                             </Link>
-                        </div>}
+                        </div>} */}
 
                         {/* 标题 */}
                         <Link
@@ -50,7 +50,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
 
                     {/* 摘要 */}
                     {(!showPreview || showSummary) && (
-                        <main className="line-clamp-2 replace my-3 2xl:my-1 text-gray-700  dark:text-gray-300 text-sm font-light leading-tight">
+                        <main className="line-clamp-2 replace my-3 2xl:my-1 text-gray-700  dark:text-gray-300 text-sm font-bold leading-tight">
                             {post.summary}
                         </main>
                     )}

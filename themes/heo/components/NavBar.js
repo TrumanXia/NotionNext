@@ -143,7 +143,7 @@ const NavBar = props => {
                 </div>
 
                 {/* 中间菜单 */}
-                <div id='nav-bar-swipe' className={`hidden lg:flex flex-grow flex-col items-center justify-center h-full relative w-full ${activeIndex === 0 ? 'fade-in-down' : 'fade-in-up'}`}>
+                <div id='nav-bar-swipe' className={`font-bold hidden lg:flex flex-grow flex-col items-center justify-center h-full relative w-full ${activeIndex === 0 ? 'fade-in-down' : 'fade-in-up'}`}>
                     {activeIndex === 0 && <MenuListTop {...props} />}
                     {activeIndex === 1 && <h1 className='font-bold text-center text-light-400 dark:text-gray-400'>{siteConfig('AUTHOR') || siteConfig('TITLE')} {siteConfig('BIO') && <>|</>} {siteConfig('BIO')}</h1>}
                 </div>
