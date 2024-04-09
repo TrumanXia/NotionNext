@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import Logo from './Logo'
 import throttle from 'lodash.throttle'
-import RandomPostButton from './RandomPostButton'
 import SearchButton from './SearchButton'
 import DarkModeButton from './DarkModeButton'
 import SlideOver from './SlideOver'
@@ -72,7 +71,8 @@ const NavBar = props => {
           const currentScrollY = window.scrollY
 
           if (currentScrollY > prevScrollY) {
-            setActiveIndex(1) // 向下滚动时设置activeIndex为1
+            // 取消向下滚动navbar变动效果
+            setActiveIndex(0) // 向下滚动时设置activeIndex为1
           } else {
             setActiveIndex(0) // 向上滚动时设置activeIndex为0
           }
@@ -149,7 +149,8 @@ const NavBar = props => {
 
                 {/* 右侧固定 */}
                 <div className='flex flex-shrink-0 justify-center items-center'>
-                    <RandomPostButton {...props} />
+                    {/* 暂时不使用随机浏览功能 */}
+                    {/* <RandomPostButton {...props} /> */}
                     <SearchButton {...props}/>
                     {!JSON.parse(siteConfig('THEME_SWITCH')) && <div className='hidden md:block'><DarkModeButton {...props} /></div>}
                     <ReadingProgress />
