@@ -14,7 +14,7 @@ import NavBar from './components/NavBar'
 import { useGlobal } from '@/lib/global'
 import BlogPostListPage from './components/BlogPostListPage'
 import BlogPostListScroll from './components/BlogPostListScroll'
-import Hero from './components/Hero'
+// import Hero from './components/Hero'
 import { useRouter } from 'next/router'
 import SearchNav from './components/SearchNav'
 import BlogPostArchive from './components/BlogPostArchive'
@@ -27,7 +27,7 @@ import ArticleCopyright from './components/ArticleCopyright'
 import ArticleRecommend from './components/ArticleRecommend'
 import ShareBar from '@/components/ShareBar'
 import Link from 'next/link'
-import CategoryBar from './components/CategoryBar'
+// import CategoryBar from './components/CategoryBar'
 import { Transition } from '@headlessui/react'
 import { Style } from './style'
 import { NoticeBar } from './components/NoticeBar'
@@ -68,9 +68,11 @@ const LayoutBase = props => {
       {router.route === '/'
         ? <>
             <NoticeBar />
-            <Hero {...props} />
+            {/* 先去除这块 */}
+            {/* <Hero {...props} /> */}
         </>
         : null}
+      {/* 先去除这块 */}
       {fullWidth ? null : <PostHeader {...props} />}
     </header>
   )
@@ -141,7 +143,7 @@ const LayoutIndex = props => {
   return (
       <div id="post-outer-wrapper" className="px-5 md:px-0">
         {/* 文章分类条 */}
-        <CategoryBar {...props} />
+        {/* <CategoryBar {...props} /> */}
         {siteConfig('POST_LIST_STYLE') === 'page'
           ? (
             <BlogPostListPage {...props} />
@@ -162,7 +164,7 @@ const LayoutPostList = props => {
   return (
       <div id="post-outer-wrapper" className="px-5  md:px-0">
         {/* 文章分类条 */}
-        <CategoryBar {...props} />
+        {/* <CategoryBar {...props} /> */}
         {siteConfig('POST_LIST_STYLE') === 'page'
           ? (
             <BlogPostListPage {...props} />
@@ -238,7 +240,7 @@ const LayoutArchive = props => {
   return (
       <div className="p-5 rounded-xl border dark:border-gray-600 max-w-6xl w-full bg-white dark:bg-[#1e1e1e]">
         {/* 文章分类条 */}
-        <CategoryBar {...props} border={false} />
+        {/* <CategoryBar {...props} border={false} /> */}
 
         <div className="px-3">
           {Object.keys(archivePosts).map(archiveTitle => (
