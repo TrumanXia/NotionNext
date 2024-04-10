@@ -15,6 +15,7 @@ import Card from './Card'
  */
 export function InfoCard(props) {
   const { siteInfo, notice } = props
+  console.log(notice)
   const router = useRouter()
   // 在文章详情页特殊处理
   const isSlugPage = router.pathname.indexOf('/[prefix]') === 0
@@ -35,7 +36,7 @@ export function InfoCard(props) {
 
             {/* 公告栏 */}
             <div>
-                <Announcement post={notice} style={{ color: 'white !important' }} />
+                <Announcement post={notice?.[0]} style={{ color: 'white !important' }} />
             </div>
 
             <div className='flex justify-between'>

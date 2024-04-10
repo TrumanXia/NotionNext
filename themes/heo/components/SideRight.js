@@ -7,6 +7,7 @@ import Live2D from '@/components/Live2D'
 import { AnalyticsCard } from './AnalyticsCard'
 import TouchMeCard from './TouchMeCard'
 import LatestPostsGroupMini from './LatestPostsGroupMini'
+import { PromotionCard } from '@/themes/heo/components/PromotionCard'
 
 const FaceBookPage = dynamic(
   () => {
@@ -29,15 +30,19 @@ const FaceBookPage = dynamic(
 export default function SideRight(props) {
   const {
     post, tagOptions,
-    currentTag, rightAreaSlot
+    currentTag, rightAreaSlot, notice
   } = props
 
   return (
         <div id='sideRight' className='hidden xl:block w-72 space-y-4 h-full'>
 
-            <InfoCard {...props} className='w-72' />
+          {notice?.map(item => {
+            const noticeWrapper = {"notice" : item}
+            return <PromotionCard {...noticeWrapper} className='w-72' />
+          })}
+            {/* <InfoCard {...props} className='w-72' /> */}
 
-            <InfoCard {...props} className='w-72' />
+            {/* <InfoCard {...props} className='w-72' /> */}
 
             <div className='sticky top-20 space-y-4'>
 
