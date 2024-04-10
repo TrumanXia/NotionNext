@@ -7,7 +7,7 @@ const Announcement = ({ post, className }) => {
     return <div >
             {post && (
                 <div id="announcement-content">
-                    <NotionPage post={post} />
+                    <NotionPage post={post} className='text-center'/>
                 </div>
             )}
         </div>

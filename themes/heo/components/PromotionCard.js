@@ -7,10 +7,12 @@ import Card from './Card'
  * @returns
  */
 export function PromotionCard(props) {
-  const { notice } = props
-  console.log(notice)
+  const { notice, bgColor } = props
+  console.log(bgColor)
   return (
-        <Card className='bg-[#4f65f0] dark:bg-yellow-600 text-white flex flex-col w-72 overflow-hidden relative'>
+    <Card className='bg-[#4f65f0] dark:bg-yellow-600 text-white flex flex-col w-72 overflow-hidden relative'>
+
+        {/* <Card className={'bg-['+ '#a21caf' + '] dark:bg-yellow-600 text-white flex flex-col w-72 overflow-hidden relative'}> */}
             {/* 宣传栏 */}
             <div>
                 <Announcement post={notice} style={{ color: 'white !important' }} />

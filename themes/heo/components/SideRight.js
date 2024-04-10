@@ -1,7 +1,6 @@
 import Card from './Card'
 import TagGroups from './TagGroups'
 import Catalog from './Catalog'
-import { InfoCard } from './InfoCard'
 import dynamic from 'next/dynamic'
 import Live2D from '@/components/Live2D'
 import { AnalyticsCard } from './AnalyticsCard'
@@ -33,11 +32,18 @@ export default function SideRight(props) {
     currentTag, rightAreaSlot, notice
   } = props
 
+  // todo 代码有bug，随机颜色暂时未采用
+  const colors = ['#450a0a', '#1a2e05', '#4f65f0', '#4a044e',
+    '#4c0519',
+    '#111827', '#c026d3']
+
   return (
         <div id='sideRight' className='hidden xl:block w-72 space-y-4 h-full'>
 
           {notice?.map(item => {
-            const noticeWrapper = {"notice" : item}
+            const randomInt = Math.floor(Math.random() * colors.length);
+            const noticeWrapper
+              = {"notice" : item, "bgColor": colors[randomInt]}
             return <PromotionCard {...noticeWrapper} className='w-72' />
           })}
             {/* <InfoCard {...props} className='w-72' /> */}
