@@ -41,6 +41,7 @@ import { AdSlot } from '@/components/GoogleAdsense'
 import { siteConfig } from '@/lib/config'
 import { isBrowser } from '@/lib/utils'
 import { loadWowJS } from '@/lib/plugins/wow'
+// import SocialButton from '@/themes/heo/components/SocialButton'
 
 /**
  * 基础布局 采用上中下布局，移动端使用顶部侧边导航栏
@@ -68,11 +69,10 @@ const LayoutBase = props => {
       {router.route === '/'
         ? <>
             <NoticeBar />
-            {/* 先去除这块 */}
+            {/* alter 先去除这块 */}
             {/* <Hero {...props} /> */}
         </>
         : null}
-      {/* 先去除这块 */}
       {fullWidth ? null : <PostHeader {...props} />}
     </header>
   )
@@ -142,8 +142,13 @@ const LayoutBase = props => {
 const LayoutIndex = props => {
   return (
       <div id="post-outer-wrapper" className="px-5 md:px-0">
-        {/* 文章分类条 */}
+        {/* alter 文章分类条 */}
         {/* <CategoryBar {...props} /> */}
+        {/* alter|move destination 文章分类条 */}
+
+      {/*  <div className="w-full h-24">
+          <SocialButton />
+        </div> */}
         {siteConfig('POST_LIST_STYLE') === 'page'
           ? (
             <BlogPostListPage {...props} />
@@ -162,17 +167,17 @@ const LayoutIndex = props => {
  */
 const LayoutPostList = props => {
   return (
-      <div id="post-outer-wrapper" className="px-5  md:px-0">
-        {/* 文章分类条 */}
-        {/* <CategoryBar {...props} /> */}
-        {siteConfig('POST_LIST_STYLE') === 'page'
-          ? (
-            <BlogPostListPage {...props} />
-            )
-          : (
-            <BlogPostListScroll {...props} />
-            )}
-      </div>
+    <div id="post-outer-wrapper" className="px-5  md:px-0">
+      {/* 文章分类条 */}
+      {/* <CategoryBar {...props} /> */}
+      {siteConfig('POST_LIST_STYLE') === 'page'
+        ? (
+          <BlogPostListPage {...props} />
+        )
+        : (
+          <BlogPostListScroll {...props} />
+        )}
+    </div>
   )
 }
 

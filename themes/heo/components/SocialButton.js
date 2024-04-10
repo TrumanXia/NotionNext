@@ -8,7 +8,10 @@ import { siteConfig } from '@/lib/config'
 const SocialButton = () => {
   return <div className='w-full justify-center flex-wrap flex'>
     <div className='space-x-12 text-3xl text-gray-600 dark:text-gray-300 '>
-      {siteConfig('CONTACT_GITHUB') && <a target='_blank' rel='noreferrer' title={'github'} href={siteConfig('CONTACT_GITHUB')} >
+      <span className="text-xl items-center"> 更多联系方式 &nbsp;
+        <i className="fa-regular fa-hand-point-right"></i>&nbsp; </span>
+      {siteConfig('CONTACT_GITHUB') &&
+        <a target='_blank' rel='noreferrer' title={'github'} href={siteConfig('CONTACT_GITHUB')} >
         <i className='transform hover:scale-125 duration-150 fab fa-github dark:hover:text-indigo-400 hover:text-indigo-600'/>
       </a>}
       {siteConfig('CONTACT_TWITTER') && <a target='_blank' rel='noreferrer' title={'twitter'} href={siteConfig('CONTACT_TWITTER')} >

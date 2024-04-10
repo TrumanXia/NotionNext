@@ -1,4 +1,4 @@
-import { isBrowser } from '@/lib/utils'
+// import { isBrowser } from '@/lib/utils'
 import { useEffect, useState } from 'react'
 
 /**
@@ -10,11 +10,11 @@ import { useEffect, useState } from 'react'
 export function Swipe({ items }) {
   const [activeIndex, setActiveIndex] = useState(0)
 
-  const handleClick = (item) => {
-    if (isBrowser) {
-      window.open(item?.url)
-    }
-  }
+  // const handleClick = (item) => {
+  //   if (isBrowser) {
+  //     window.open(item?.url)
+  //   }
+  // }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,7 +27,7 @@ export function Swipe({ items }) {
         <div className="h-full relative w-full overflow-hidden">
             {items.map((item, index) => (
                 <div
-                    onClick={() => handleClick(item)}
+                    // onClick={() => handleClick(item)}
                     key={index}
                     className={`absolute top-0 bottom-0 w-full h-full flex justify-center items-center line-clamp-1 transform transition-transform duration-500 ${index === activeIndex ? 'translate-y-0 slide-in' : 'translate-y-full slide-out'
                         }`}

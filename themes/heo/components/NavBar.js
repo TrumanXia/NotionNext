@@ -8,6 +8,7 @@ import ReadingProgress from './ReadingProgress'
 import { MenuListTop } from './MenuListTop'
 import { isBrowser } from '@/lib/utils'
 import { siteConfig } from '@/lib/config'
+// import SocialButton from '@/themes/heo/components/SocialButton'
 
 /**
  * 顶部导航
@@ -143,13 +144,18 @@ const NavBar = props => {
                 </div>
 
                 {/* 中间菜单 */}
-                <div id='nav-bar-swipe' className={`font-bold hidden lg:flex flex-grow flex-col items-center justify-center h-full relative w-full ${activeIndex === 0 ? 'fade-in-down' : 'fade-in-up'}`}>
-                    {activeIndex === 0 && <MenuListTop {...props} />}
-                    {activeIndex === 1 && <h1 className='font-bold text-center text-light-400 dark:text-gray-400'>{siteConfig('AUTHOR') || siteConfig('TITLE')} {siteConfig('BIO') && <>|</>} {siteConfig('BIO')}</h1>}
-                </div>
+              <div id="nav-bar-swipe"
+                   className={`font-bold hidden lg:flex flex-grow flex-col items-center justify-center h-full relative w-full ${activeIndex === 0 ? 'fade-in-down' : 'fade-in-up'}`}>
+                {activeIndex === 0 && <MenuListTop {...props} />}
+                {activeIndex === 1 && ''}
+                {/*
+                {activeIndex === 1 && <h1
+                  className="font-bold text-center text-light-400 dark:text-gray-400">{siteConfig('AUTHOR') || siteConfig('TITLE')} {siteConfig('BIO') && <>|</>} {siteConfig('BIO')}</h1>}
+*/}
+              </div>
 
-                {/* 右侧固定 */}
-                <div className='flex flex-shrink-0 justify-center items-center'>
+              {/* 右侧固定 */}
+              <div className='flex flex-shrink-0 justify-center items-center'>
                     {/* 暂时不使用随机浏览功能 */}
                     {/* <RandomPostButton {...props} /> */}
                     <SearchButton {...props}/>
