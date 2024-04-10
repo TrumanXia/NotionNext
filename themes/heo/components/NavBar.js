@@ -131,7 +131,7 @@ const NavBar = props => {
 
         {/* 顶部导航菜单栏 */}
         {/* alter 更改导航栏高度 */}
-        <nav id='nav' className={`bg-[#eaf2ec] z-20 h-24 top-0 w-full bottom-40
+        <nav id='nav' className={`z-20 h-24 top-0 w-full bottom-40
             ${fixedNav ? 'fixed' : 'relative bg-transparent'} 
             ${textWhite ? 'text-white ' : 'text-black dark:text-white'}  
             ${navBgWhite ? 'bg-[#eaf2ec]  dark:bg-[#18171d]' : 'bg-transparent'}`}>
