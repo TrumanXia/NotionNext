@@ -8,7 +8,7 @@ const Logo = props => {
   return (
         <Link href='/' passHref legacyBehavior>
             <div className='flex flex-nowrap justify-center items-center cursor-pointer font-extrabold'>
-                <LazyImage src={siteInfo?.icon} width={24} height={24} alt={siteConfig('AUTHOR')} className='mr-4 hidden md:block' />
+                <LazyImage src={siteInfo?.icon} width={24} height={24} alt={siteConfig('AUTHOR')} className='mr-4 hidden md:block rounded-lg' />
                 <div id='logo-text' className='group rounded-2xl flex-none relative'>
                     <div className='group-hover:opacity-0 opacity-100 visible group-hover:invisible text-2xl my-auto rounded dark:border-white duration-200'>
                         {siteConfig('TITLE') }
