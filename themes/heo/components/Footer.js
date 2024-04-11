@@ -26,7 +26,7 @@ const Footer = ({ title }) => {
 
             {/* 底部页面信息 */}
           <div id='footer-bottom'
-               className='w-full h-25 flex flex-col p-3 justify-between px-6 items-center bg-[#f1f3f7] dark:bg-[#30343f]'>
+               className='w-full h-35 flex flex-col p-3 justify-between px-6 items-center bg-[#f1f3f7] dark:bg-[#30343f]'>
 
             <div id='footer-bottom-left'>
               NN {siteConfig('VERSION')} <i className='fas fa-copyright' /> {`${copyrightDate}`} <i

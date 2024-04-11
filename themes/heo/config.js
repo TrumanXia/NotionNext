@@ -5,7 +5,7 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '本站为全品类资源站，直接按照关键字搜索。如果搜索不到，也可以任意文章评论留言。商务邮箱：alanglovesharing@gmail.com', url: '' }
+    { title: '本站为全品类资源站，直接按照关键字搜索。如果搜索不到，可以任意文章评论留言。商务邮箱：alanglovesharing@gmail.com', url: '' }
   ],
 
   // 英雄区左右侧组件颠倒位置
