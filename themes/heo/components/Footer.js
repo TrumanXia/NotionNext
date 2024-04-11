@@ -28,13 +28,13 @@ const Footer = ({ title }) => {
           <div id='footer-bottom'
                className='w-full h-35 flex flex-col p-3 justify-between px-6 items-center bg-[#f1f3f7] dark:bg-[#30343f]'>
 
-            <div id='footer-bottom-left'>
-              NotionNext {siteConfig('VERSION')} <i className='fas fa-copyright' /> {`${copyrightDate}`} <i
-              className='mx-1 animate-pulse fas fa-heart' /> <a href={siteConfig('LINK')}
-                                                                className='underline font-bold text-lg gradient-text'>{siteConfig('AUTHOR')}</a>.
+            <div id="footer-bottom-left">
+              NotionNext {siteConfig('VERSION')}&thinsp; <a href={siteConfig('LINK')}
+                                                    className="underline font-bold text-lg gradient-text">{siteConfig('AUTHOR')}</a>
+              &nbsp; <i className="fas fa-copyright" /> {`${copyrightDate}`}
             </div>
 
-            <div id='footer-bottom-middle'>
+            <div id="footer-bottom-middle">
               网站声明：1. 请浏览者务必遵守所在地法律！
               2. 本网站提供所有资源均是互联网上资源，站长辛苦收集整理。
               但如果相关方觉得内容有争议，请通过本站提供的各种联系方式联系站长。
