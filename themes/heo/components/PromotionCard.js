@@ -7,8 +7,7 @@ import Card from './Card'
  * @returns
  */
 export function PromotionCard(props) {
-  const { notice, bgColor } = props
-  console.log(bgColor)
+  const { notice } = props
   return (
     <Card className='bg-[#4f65f0] dark:bg-yellow-600 text-white flex flex-col w-72 overflow-hidden relative'>
 
