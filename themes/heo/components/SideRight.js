@@ -53,11 +53,11 @@ export default function SideRight(props) {
             <div className='sticky top-20 space-y-4'>
 
                 {/* 文章页显示目录 */}
-                {post && post.toc && post.toc.length > 0 && (
+                {/* {post && post.toc && post.toc.length > 0 && (
                     <Card className='bg-white dark:bg-[#1e1e1e]'>
                         <Catalog toc={post.toc} />
                     </Card>
-                )}
+                )} */}
 
                 {/* 联系交流群 */}
                 <TouchMeCard />
@@ -69,8 +69,8 @@ export default function SideRight(props) {
 
                 {rightAreaSlot}
 
-                <FaceBookPage />
-                <Live2D />
+                {/* <FaceBookPage /> */}
+                {/* <Live2D /> */}
 
                 {/* 标签和成绩 */}
                 <Card className={'bg-white dark:bg-[#1e1e1e] dark:text-white'}>
