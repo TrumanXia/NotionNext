@@ -5,6 +5,8 @@ import LazyImage from '@/components/LazyImage'
 import { siteConfig } from '@/lib/config'
 import { checkContainHttp, sliceUrlFromHttp } from '@/lib/utils'
 import NotionIcon from '@/components/NotionIcon'
+import WordCount from '@/components/WordCount'
+import { formatDateFmt } from '@/lib/utils/formatDate'
 
 const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
   const showPreview = siteConfig('HEO_POST_LIST_PREVIEW', null, CONFIG) && post.blockMap
@@ -29,42 +31,52 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
                 )}
 
                 {/* 文字区块 */}
-                <div className={'flex p-6 2xl:p-4 flex-col justify-between h-48 md:h-full 2xl:h-48 w-full md:w-7/12 2xl:w-full'}>
-                    <header>
-                        {/* 分类 */}
-                        {/* {post?.category && <div className={`flex mb-1 items-center ${showPreview ? 'justify-center' : 'justify-start'} hidden md:block flex-wrap dark:text-gray-500 text-gray-600 `}>
+              <div
+                className={'flex p-6 2xl:p-4 flex-col justify-between h-48 md:h-full 2xl:h-48 w-full md:w-7/12 2xl:w-full'}>
+                <header>
+                  {/* 分类 */}
+                  {/* {post?.category && <div className={`flex mb-1 items-center ${showPreview ? 'justify-center' : 'justify-start'} hidden md:block flex-wrap dark:text-gray-500 text-gray-600 `}>
                             <Link passHref href={`/category/${post.category}`}
                                 className="cursor-pointer text-xs font-normal menu-link hover:text-indigo-700 dark:hover:text-yellow-700  dark:text-gray-600 transform">
                                 {post.category}
                             </Link>
                         </div>} */}
 
-                        {/* 标题 */}
-                        <Link
-                            href={url}
-                            passHref
-                            className={' group-hover:text-indigo-700 dark:hover:text-yellow-700 dark:group-hover:text-yellow-600 text-black dark:text-gray-100  line-clamp-2 replace cursor-pointer text-xl font-extrabold leading-tight'}>
-                            <NotionIcon icon={post.pageIcon} /><span className='menu-link '>{post.title}</span>
-                        </Link>
-                    </header>
+                  {/* 标题 */}
+                  <Link
+                    href={url}
+                    passHref
+                    className={' group-hover:text-indigo-700 dark:hover:text-yellow-700 dark:group-hover:text-yellow-600 text-black dark:text-gray-100  line-clamp-2 replace cursor-pointer text-xl font-extrabold leading-tight'}>
+                    <NotionIcon icon={post.pageIcon} /><span className='menu-link '>{post.title}</span>
+                  </Link>
+                </header>
 
-                    {/* 摘要 */}
-                    {(!showPreview || showSummary) && (
-                        <main className="line-clamp-2 replace my-3 2xl:my-1 text-gray-700  dark:text-gray-300 text-sm font-bold leading-tight">
-                            {post.summary}
-                        </main>
-                    )}
+                {/* 摘要 */}
+                {(!showPreview || showSummary) && (
+                  <main
+                    className="line-clamp-2 replace my-3 2xl:my-1 text-gray-700  dark:text-gray-300 text-sm font-bold leading-tight">
+                    {post.summary}
+                  </main>
+                )}
 
-                    <div className="md:flex-nowrap flex-wrap md:justify-start inline-block">
-                        <div>
-                            {' '}
-                            {post.tagItems?.map(tag => (
-                                <TagItemMini key={tag.name} tag={tag} />
-                            ))}
-                        </div>
-                    </div>
+                <div className='flex dark:text-gray-200 text-opacity-70'>
+
+                  <div className="pl-1 mr-2">
+                    <i className="fa-regular fa-calendar-check"></i> {post.lastEditedDay}
+                  </div>
 
                 </div>
+
+                <div className="md:flex-nowrap flex-wrap md:justify-start inline-block">
+                  <div>
+                    {' '}
+                    {post.tagItems?.map(tag => (
+                      <TagItemMini key={tag.name} tag={tag} />
+                    ))}
+                  </div>
+                </div>
+
+              </div>
             </div>
 
         </article>
