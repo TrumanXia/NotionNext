@@ -68,7 +68,8 @@ const LayoutBase = props => {
       {/* 通知横幅 */}
       {router.route === '/'
         ? <>
-            <NoticeBar />
+          {/* alter 先去除这块 */}
+            {/* <NoticeBar /> */}
             {/* alter 先去除这块 */}
             {/* <Hero {...props} /> */}
         </>

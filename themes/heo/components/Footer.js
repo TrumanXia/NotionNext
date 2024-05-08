@@ -18,9 +18,9 @@ const Footer = ({ title }) => {
             </div>
 
             {/* 社交按钮 */}
-             <div className='w-full h-24'>
-                <SocialButton />
-            </div>
+            {/* <div className='w-full h-24'> */}
+            {/*    <SocialButton /> */}
+            {/* </div> */}
 
             <br />
 
@@ -29,7 +29,7 @@ const Footer = ({ title }) => {
                className='w-full h-35 flex flex-col p-3 justify-between px-6 items-center bg-[#f1f3f7] dark:bg-[#30343f]'>
 
             <div id="footer-bottom-left">
-              NotionNext {siteConfig('VERSION')}&thinsp; <a href={siteConfig('LINK')}
+              <a href={siteConfig('LINK')}
                                                     className="underline font-bold text-lg gradient-text">{siteConfig('AUTHOR')}</a>
               &nbsp; <i className="fas fa-copyright" /> {`${copyrightDate}`}
             </div>
