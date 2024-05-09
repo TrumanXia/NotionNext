@@ -84,7 +84,7 @@ export default function SlideOver(props) {
                                             </section>
 
                                             <section className='space-y-2 flex flex-col'>
-                                                <div>博客</div>
+                                                <div>菜单</div>
                                                 {/* 导航按钮 */}
                                               {/* alter  */}
                                                 {/* <div className='gap-2 grid grid-cols-2'>
